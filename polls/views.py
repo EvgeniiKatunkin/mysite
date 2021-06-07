@@ -26,6 +26,8 @@ class ResultsView(generic.DetailView):
 
 
 def vote(request, question_id):
+    """Choose one answer to a poll question.
+    The system counts amount of votes for each answer in the poll."""
     question = get_object_or_404(Question, pk=question_id)
     try:
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
