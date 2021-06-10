@@ -1,3 +1,4 @@
+"""Test file for polls application."""
 import datetime
 
 from django.test import TestCase
